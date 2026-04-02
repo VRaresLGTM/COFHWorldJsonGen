@@ -106,15 +106,15 @@
             panelProperties.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Right;
             panelProperties.AutoScroll = true;
             panelProperties.Controls.Add(buttonAddProperty);
-            panelProperties.Location = new Point(145, 46);
+            panelProperties.Location = new Point(145, 47);
             panelProperties.Name = "panelProperties";
-            panelProperties.Size = new Size(197, 63);
+            panelProperties.Size = new Size(197, 62);
             panelProperties.TabIndex = 18;
             // 
             // buttonAddProperty
             // 
             buttonAddProperty.Enabled = false;
-            buttonAddProperty.Location = new Point(8, 5);
+            buttonAddProperty.Location = new Point(3, 3);
             buttonAddProperty.Name = "buttonAddProperty";
             buttonAddProperty.Size = new Size(168, 23);
             buttonAddProperty.TabIndex = 6;
