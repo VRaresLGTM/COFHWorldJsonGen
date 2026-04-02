@@ -41,12 +41,12 @@ namespace COFHWorldJsonGen
                 Name = controlName,
                 Text = result[1],
                 PlaceholderText = result[0],
-                Location = new Point(buttonAddProperty.Location.X+1, buttonAddProperty.Location.Y + (propertyFields.Count + 1) * (buttonAddProperty.Height + 3)),
-                Size = buttonAddProperty.Size - new Size(2,0),
+                Location = new Point(buttonAddProperty.Location.X + 1, buttonAddProperty.Location.Y + (propertyFields.Count + 1) * (buttonAddProperty.Height + 3)),
+                Size = buttonAddProperty.Size - new Size(2, 0),
                 Visible = true,
             };
 
-            flowLayoutPanelProperties.Controls.Add(tb);
+            panelProperties.Controls.Add(tb);
             propertyFields.Add(tb);
         }
 
@@ -65,6 +65,32 @@ namespace COFHWorldJsonGen
         private void panelEncompass_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+
+        private void buttonClear_Click(object sender, EventArgs e)
+        {
+            richTextBoxBiomeEntries.Clear();
+            richTextBoxDimensionEntries.Clear();
+            richTextBoxResult.Clear();
+            textBoxBlockName.Clear();
+            textBoxEntryName.Clear();
+            textBoxMaterial.Clear();
+            numericClusterCount.Value = 0;
+            numericClusterSize.Value = 0;
+            numericMaxHeight.Value = 0;
+            numericMinHeight.Value = 0;
+            checkBoxAdvancedBlockProperties.Checked = false;
+            checkBoxRestrictionBiome.Checked = true;
+            checkBoxRestrictionDimension.Checked = false;
+            comboBoxDistribution.SelectedIndex = -1;
+            comboBoxType.SelectedIndex = -1;
+            var toRemove = panelProperties.Controls.OfType<TextBox>().ToArray();
+            foreach (var textBox in toRemove)
+            {
+                panelProperties.Controls.Remove(textBox);
+                textBox.Dispose();
+            }
+            propertyFields.Clear();
         }
     }
 }

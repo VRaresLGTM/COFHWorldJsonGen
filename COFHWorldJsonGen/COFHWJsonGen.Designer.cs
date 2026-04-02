@@ -29,31 +29,31 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(COFHWJsonGen));
-            comboBox1 = new ComboBox();
+            comboBoxDistribution = new ComboBox();
             panelGenerator = new Panel();
-            flowLayoutPanelProperties = new Panel();
+            panelProperties = new Panel();
             buttonAddProperty = new Button();
             checkBoxAdvancedBlockProperties = new CheckBox();
             numericClusterSize = new NumericUpDown();
             labelClusterSize = new Label();
             textBoxMaterial = new TextBox();
-            textBoxBlock = new TextBox();
+            textBoxBlockName = new TextBox();
             labelGenerator = new Label();
-            textBox3 = new TextBox();
-            richTextBox3 = new RichTextBox();
+            textBoxEntryName = new TextBox();
+            richTextBoxResult = new RichTextBox();
             buttonClear = new Button();
             panelDetails = new Panel();
-            panel2 = new Panel();
+            panelDimension = new Panel();
             labelDimension = new Label();
             richTextBoxDimensionEntries = new RichTextBox();
             label1 = new Label();
-            checkBox1 = new CheckBox();
-            panel1 = new Panel();
+            checkBoxRestrictionDimension = new CheckBox();
+            panelBiome = new Panel();
             labelValueEntries = new Label();
             richTextBoxBiomeEntries = new RichTextBox();
-            comboBox2 = new ComboBox();
+            comboBoxType = new ComboBox();
             labelBiome = new Label();
-            checkBoxRestriction = new CheckBox();
+            checkBoxRestrictionBiome = new CheckBox();
             checkBoxRetrogen = new CheckBox();
             numericMaxHeight = new NumericUpDown();
             label3 = new Label();
@@ -64,52 +64,52 @@
             labelDetails = new Label();
             buttonGenerate = new Button();
             panelGenerator.SuspendLayout();
-            flowLayoutPanelProperties.SuspendLayout();
+            panelProperties.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)numericClusterSize).BeginInit();
             panelDetails.SuspendLayout();
-            panel2.SuspendLayout();
-            panel1.SuspendLayout();
+            panelDimension.SuspendLayout();
+            panelBiome.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)numericMaxHeight).BeginInit();
             ((System.ComponentModel.ISupportInitialize)numericMinHeight).BeginInit();
             ((System.ComponentModel.ISupportInitialize)numericClusterCount).BeginInit();
             SuspendLayout();
             // 
-            // comboBox1
+            // comboBoxDistribution
             // 
-            comboBox1.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
-            comboBox1.FormattingEnabled = true;
-            comboBox1.Items.AddRange(new object[] { "uniform", "gaussian", "surface", "fractal", "underwater", "underfluid", "cave", "sequential", "custom" });
-            comboBox1.Location = new Point(190, 7);
-            comboBox1.Name = "comboBox1";
-            comboBox1.Size = new Size(165, 23);
-            comboBox1.TabIndex = 1;
-            comboBox1.Text = "Select Distribution Type";
+            comboBoxDistribution.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
+            comboBoxDistribution.FormattingEnabled = true;
+            comboBoxDistribution.Items.AddRange(new object[] { "uniform", "gaussian", "surface", "fractal", "underwater", "underfluid", "cave", "sequential", "custom" });
+            comboBoxDistribution.Location = new Point(190, 7);
+            comboBoxDistribution.Name = "comboBoxDistribution";
+            comboBoxDistribution.Size = new Size(165, 23);
+            comboBoxDistribution.TabIndex = 1;
+            comboBoxDistribution.Text = "Select Distribution Type";
             // 
             // panelGenerator
             // 
             panelGenerator.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             panelGenerator.BorderStyle = BorderStyle.FixedSingle;
-            panelGenerator.Controls.Add(flowLayoutPanelProperties);
+            panelGenerator.Controls.Add(panelProperties);
             panelGenerator.Controls.Add(checkBoxAdvancedBlockProperties);
             panelGenerator.Controls.Add(numericClusterSize);
             panelGenerator.Controls.Add(labelClusterSize);
             panelGenerator.Controls.Add(textBoxMaterial);
-            panelGenerator.Controls.Add(textBoxBlock);
+            panelGenerator.Controls.Add(textBoxBlockName);
             panelGenerator.Controls.Add(labelGenerator);
             panelGenerator.Location = new Point(9, 36);
             panelGenerator.Name = "panelGenerator";
             panelGenerator.Size = new Size(347, 114);
             panelGenerator.TabIndex = 2;
             // 
-            // flowLayoutPanelProperties
+            // panelProperties
             // 
-            flowLayoutPanelProperties.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Right;
-            flowLayoutPanelProperties.AutoScroll = true;
-            flowLayoutPanelProperties.Controls.Add(buttonAddProperty);
-            flowLayoutPanelProperties.Location = new Point(145, 46);
-            flowLayoutPanelProperties.Name = "flowLayoutPanelProperties";
-            flowLayoutPanelProperties.Size = new Size(197, 63);
-            flowLayoutPanelProperties.TabIndex = 18;
+            panelProperties.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Right;
+            panelProperties.AutoScroll = true;
+            panelProperties.Controls.Add(buttonAddProperty);
+            panelProperties.Location = new Point(145, 46);
+            panelProperties.Name = "panelProperties";
+            panelProperties.Size = new Size(197, 63);
+            panelProperties.TabIndex = 18;
             // 
             // buttonAddProperty
             // 
@@ -117,7 +117,7 @@
             buttonAddProperty.Location = new Point(8, 5);
             buttonAddProperty.Name = "buttonAddProperty";
             buttonAddProperty.Size = new Size(168, 23);
-            buttonAddProperty.TabIndex = 0;
+            buttonAddProperty.TabIndex = 6;
             buttonAddProperty.Text = "Add Property";
             buttonAddProperty.UseVisualStyleBackColor = true;
             buttonAddProperty.Click += buttonAddProperty_Click;
@@ -129,7 +129,7 @@
             checkBoxAdvancedBlockProperties.Name = "checkBoxAdvancedBlockProperties";
             checkBoxAdvancedBlockProperties.RightToLeft = RightToLeft.Yes;
             checkBoxAdvancedBlockProperties.Size = new Size(135, 19);
-            checkBoxAdvancedBlockProperties.TabIndex = 17;
+            checkBoxAdvancedBlockProperties.TabIndex = 5;
             checkBoxAdvancedBlockProperties.Text = "Advanced Properties";
             checkBoxAdvancedBlockProperties.UseVisualStyleBackColor = true;
             checkBoxAdvancedBlockProperties.CheckedChanged += checkBoxAdvancedBlockProperties_CheckedChanged;
@@ -140,7 +140,7 @@
             numericClusterSize.Location = new Point(263, 17);
             numericClusterSize.Name = "numericClusterSize";
             numericClusterSize.Size = new Size(69, 23);
-            numericClusterSize.TabIndex = 4;
+            numericClusterSize.TabIndex = 3;
             // 
             // labelClusterSize
             // 
@@ -159,16 +159,16 @@
             textBoxMaterial.Name = "textBoxMaterial";
             textBoxMaterial.PlaceholderText = "Material";
             textBoxMaterial.Size = new Size(177, 23);
-            textBoxMaterial.TabIndex = 3;
+            textBoxMaterial.TabIndex = 2;
             // 
-            // textBoxBlock
+            // textBoxBlockName
             // 
-            textBoxBlock.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
-            textBoxBlock.Location = new Point(4, 50);
-            textBoxBlock.Name = "textBoxBlock";
-            textBoxBlock.PlaceholderText = "Block Name";
-            textBoxBlock.Size = new Size(135, 23);
-            textBoxBlock.TabIndex = 2;
+            textBoxBlockName.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
+            textBoxBlockName.Location = new Point(4, 50);
+            textBoxBlockName.Name = "textBoxBlockName";
+            textBoxBlockName.PlaceholderText = "Block Name";
+            textBoxBlockName.Size = new Size(135, 23);
+            textBoxBlockName.TabIndex = 4;
             // 
             // labelGenerator
             // 
@@ -179,22 +179,22 @@
             labelGenerator.TabIndex = 2;
             labelGenerator.Text = "Generator:";
             // 
-            // textBox3
+            // textBoxEntryName
             // 
-            textBox3.Location = new Point(10, 7);
-            textBox3.Name = "textBox3";
-            textBox3.PlaceholderText = "Entry Name";
-            textBox3.Size = new Size(176, 23);
-            textBox3.TabIndex = 0;
+            textBoxEntryName.Location = new Point(10, 7);
+            textBoxEntryName.Name = "textBoxEntryName";
+            textBoxEntryName.PlaceholderText = "Entry Name";
+            textBoxEntryName.Size = new Size(176, 23);
+            textBoxEntryName.TabIndex = 0;
             // 
-            // richTextBox3
+            // richTextBoxResult
             // 
-            richTextBox3.Anchor = AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-            richTextBox3.Location = new Point(9, 533);
-            richTextBox3.Name = "richTextBox3";
-            richTextBox3.Size = new Size(347, 113);
-            richTextBox3.TabIndex = 16;
-            richTextBox3.Text = "";
+            richTextBoxResult.Anchor = AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            richTextBoxResult.Location = new Point(9, 533);
+            richTextBoxResult.Name = "richTextBoxResult";
+            richTextBoxResult.Size = new Size(347, 113);
+            richTextBoxResult.TabIndex = 16;
+            richTextBoxResult.Text = "";
             // 
             // buttonClear
             // 
@@ -205,13 +205,14 @@
             buttonClear.TabIndex = 17;
             buttonClear.Text = "Clear Boxes";
             buttonClear.UseVisualStyleBackColor = true;
+            buttonClear.Click += buttonClear_Click;
             // 
             // panelDetails
             // 
             panelDetails.Anchor = AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             panelDetails.BorderStyle = BorderStyle.FixedSingle;
-            panelDetails.Controls.Add(panel2);
-            panelDetails.Controls.Add(panel1);
+            panelDetails.Controls.Add(panelDimension);
+            panelDetails.Controls.Add(panelBiome);
             panelDetails.Controls.Add(checkBoxRetrogen);
             panelDetails.Controls.Add(numericMaxHeight);
             panelDetails.Controls.Add(label3);
@@ -225,18 +226,18 @@
             panelDetails.Size = new Size(346, 343);
             panelDetails.TabIndex = 5;
             // 
-            // panel2
+            // panelDimension
             // 
-            panel2.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Right;
-            panel2.BorderStyle = BorderStyle.FixedSingle;
-            panel2.Controls.Add(labelDimension);
-            panel2.Controls.Add(richTextBoxDimensionEntries);
-            panel2.Controls.Add(label1);
-            panel2.Controls.Add(checkBox1);
-            panel2.Location = new Point(173, 78);
-            panel2.Name = "panel2";
-            panel2.Size = new Size(168, 258);
-            panel2.TabIndex = 16;
+            panelDimension.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Right;
+            panelDimension.BorderStyle = BorderStyle.FixedSingle;
+            panelDimension.Controls.Add(labelDimension);
+            panelDimension.Controls.Add(richTextBoxDimensionEntries);
+            panelDimension.Controls.Add(label1);
+            panelDimension.Controls.Add(checkBoxRestrictionDimension);
+            panelDimension.Location = new Point(173, 78);
+            panelDimension.Name = "panelDimension";
+            panelDimension.Size = new Size(168, 258);
+            panelDimension.TabIndex = 16;
             // 
             // labelDimension
             // 
@@ -266,30 +267,30 @@
             label1.TabIndex = 15;
             label1.Text = "Value Entries:";
             // 
-            // checkBox1
+            // checkBoxRestrictionDimension
             // 
-            checkBox1.AutoSize = true;
-            checkBox1.Location = new Point(2, 24);
-            checkBox1.Name = "checkBox1";
-            checkBox1.RightToLeft = RightToLeft.Yes;
-            checkBox1.Size = new Size(72, 19);
-            checkBox1.TabIndex = 13;
-            checkBox1.Text = "Whitelist";
-            checkBox1.UseVisualStyleBackColor = true;
+            checkBoxRestrictionDimension.AutoSize = true;
+            checkBoxRestrictionDimension.Location = new Point(2, 24);
+            checkBoxRestrictionDimension.Name = "checkBoxRestrictionDimension";
+            checkBoxRestrictionDimension.RightToLeft = RightToLeft.Yes;
+            checkBoxRestrictionDimension.Size = new Size(72, 19);
+            checkBoxRestrictionDimension.TabIndex = 13;
+            checkBoxRestrictionDimension.Text = "Whitelist";
+            checkBoxRestrictionDimension.UseVisualStyleBackColor = true;
             // 
-            // panel1
+            // panelBiome
             // 
-            panel1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-            panel1.BorderStyle = BorderStyle.FixedSingle;
-            panel1.Controls.Add(labelValueEntries);
-            panel1.Controls.Add(richTextBoxBiomeEntries);
-            panel1.Controls.Add(comboBox2);
-            panel1.Controls.Add(labelBiome);
-            panel1.Controls.Add(checkBoxRestriction);
-            panel1.Location = new Point(4, 78);
-            panel1.Name = "panel1";
-            panel1.Size = new Size(159, 258);
-            panel1.TabIndex = 9;
+            panelBiome.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            panelBiome.BorderStyle = BorderStyle.FixedSingle;
+            panelBiome.Controls.Add(labelValueEntries);
+            panelBiome.Controls.Add(richTextBoxBiomeEntries);
+            panelBiome.Controls.Add(comboBoxType);
+            panelBiome.Controls.Add(labelBiome);
+            panelBiome.Controls.Add(checkBoxRestrictionBiome);
+            panelBiome.Location = new Point(4, 78);
+            panelBiome.Name = "panelBiome";
+            panelBiome.Size = new Size(159, 258);
+            panelBiome.TabIndex = 9;
             // 
             // labelValueEntries
             // 
@@ -310,16 +311,16 @@
             richTextBoxBiomeEntries.TabIndex = 11;
             richTextBoxBiomeEntries.Text = "";
             // 
-            // comboBox2
+            // comboBoxType
             // 
-            comboBox2.FormattingEnabled = true;
-            comboBox2.Items.AddRange(new object[] { "dictionary", "temperature", "name", "id" });
-            comboBox2.Location = new Point(6, 26);
-            comboBox2.Name = "comboBox2";
-            comboBox2.RightToLeft = RightToLeft.No;
-            comboBox2.Size = new Size(121, 23);
-            comboBox2.TabIndex = 9;
-            comboBox2.Text = "Choose Type";
+            comboBoxType.FormattingEnabled = true;
+            comboBoxType.Items.AddRange(new object[] { "dictionary", "temperature", "name", "id" });
+            comboBoxType.Location = new Point(6, 26);
+            comboBoxType.Name = "comboBoxType";
+            comboBoxType.RightToLeft = RightToLeft.No;
+            comboBoxType.Size = new Size(121, 23);
+            comboBoxType.TabIndex = 9;
+            comboBoxType.Text = "Choose Type";
             // 
             // labelBiome
             // 
@@ -330,18 +331,18 @@
             labelBiome.TabIndex = 1;
             labelBiome.Text = "Biome:";
             // 
-            // checkBoxRestriction
+            // checkBoxRestrictionBiome
             // 
-            checkBoxRestriction.AutoSize = true;
-            checkBoxRestriction.Checked = true;
-            checkBoxRestriction.CheckState = CheckState.Checked;
-            checkBoxRestriction.Location = new Point(5, 55);
-            checkBoxRestriction.Name = "checkBoxRestriction";
-            checkBoxRestriction.RightToLeft = RightToLeft.Yes;
-            checkBoxRestriction.Size = new Size(72, 19);
-            checkBoxRestriction.TabIndex = 10;
-            checkBoxRestriction.Text = "Whitelist";
-            checkBoxRestriction.UseVisualStyleBackColor = true;
+            checkBoxRestrictionBiome.AutoSize = true;
+            checkBoxRestrictionBiome.Checked = true;
+            checkBoxRestrictionBiome.CheckState = CheckState.Checked;
+            checkBoxRestrictionBiome.Location = new Point(5, 55);
+            checkBoxRestrictionBiome.Name = "checkBoxRestrictionBiome";
+            checkBoxRestrictionBiome.RightToLeft = RightToLeft.Yes;
+            checkBoxRestrictionBiome.Size = new Size(72, 19);
+            checkBoxRestrictionBiome.TabIndex = 10;
+            checkBoxRestrictionBiome.Text = "Whitelist";
+            checkBoxRestrictionBiome.UseVisualStyleBackColor = true;
             // 
             // checkBoxRetrogen
             // 
@@ -350,7 +351,7 @@
             checkBoxRetrogen.Name = "checkBoxRetrogen";
             checkBoxRetrogen.RightToLeft = RightToLeft.Yes;
             checkBoxRetrogen.Size = new Size(74, 19);
-            checkBoxRetrogen.TabIndex = 8;
+            checkBoxRetrogen.TabIndex = 6;
             checkBoxRetrogen.Text = "Retrogen";
             checkBoxRetrogen.UseVisualStyleBackColor = true;
             // 
@@ -361,7 +362,7 @@
             numericMaxHeight.MaximumSize = new Size(54, 0);
             numericMaxHeight.Name = "numericMaxHeight";
             numericMaxHeight.Size = new Size(54, 23);
-            numericMaxHeight.TabIndex = 7;
+            numericMaxHeight.TabIndex = 8;
             // 
             // label3
             // 
@@ -380,7 +381,7 @@
             numericMinHeight.MaximumSize = new Size(54, 0);
             numericMinHeight.Name = "numericMinHeight";
             numericMinHeight.Size = new Size(54, 23);
-            numericMinHeight.TabIndex = 6;
+            numericMinHeight.TabIndex = 7;
             // 
             // labelMinHeight
             // 
@@ -435,10 +436,10 @@
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(364, 658);
             Controls.Add(buttonClear);
-            Controls.Add(textBox3);
+            Controls.Add(textBoxEntryName);
             Controls.Add(panelDetails);
-            Controls.Add(comboBox1);
-            Controls.Add(richTextBox3);
+            Controls.Add(comboBoxDistribution);
+            Controls.Add(richTextBoxResult);
             Controls.Add(panelGenerator);
             Controls.Add(buttonGenerate);
             Icon = (Icon)resources.GetObject("$this.Icon");
@@ -448,14 +449,14 @@
             Load += Form1_Load;
             panelGenerator.ResumeLayout(false);
             panelGenerator.PerformLayout();
-            flowLayoutPanelProperties.ResumeLayout(false);
+            panelProperties.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)numericClusterSize).EndInit();
             panelDetails.ResumeLayout(false);
             panelDetails.PerformLayout();
-            panel2.ResumeLayout(false);
-            panel2.PerformLayout();
-            panel1.ResumeLayout(false);
-            panel1.PerformLayout();
+            panelDimension.ResumeLayout(false);
+            panelDimension.PerformLayout();
+            panelBiome.ResumeLayout(false);
+            panelBiome.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)numericMaxHeight).EndInit();
             ((System.ComponentModel.ISupportInitialize)numericMinHeight).EndInit();
             ((System.ComponentModel.ISupportInitialize)numericClusterCount).EndInit();
@@ -465,31 +466,31 @@
 
         #endregion
 
-        private ComboBox comboBox1;
+        private ComboBox comboBoxDistribution;
         private Panel panelGenerator;
         private Label labelGenerator;
         private TextBox textBoxMaterial;
-        private TextBox textBoxBlock;
+        private TextBox textBoxBlockName;
         private NumericUpDown numericClusterSize;
         private Label labelClusterSize;
-        private TextBox textBox3;
-        private RichTextBox richTextBox3;
+        private TextBox textBoxEntryName;
+        private RichTextBox richTextBoxResult;
         private CheckBox checkBoxAdvancedBlockProperties;
         private Button buttonAddProperty;
-        private Panel flowLayoutPanelProperties;
+        private Panel panelProperties;
         private Button buttonClear;
         private Panel panelDetails;
-        private Panel panel2;
+        private Panel panelDimension;
         private Label labelDimension;
         private RichTextBox richTextBoxDimensionEntries;
         private Label label1;
-        private CheckBox checkBox1;
-        private Panel panel1;
+        private CheckBox checkBoxRestrictionDimension;
+        private Panel panelBiome;
         private Label labelValueEntries;
         private RichTextBox richTextBoxBiomeEntries;
-        private ComboBox comboBox2;
+        private ComboBox comboBoxType;
         private Label labelBiome;
-        private CheckBox checkBoxRestriction;
+        private CheckBox checkBoxRestrictionBiome;
         private CheckBox checkBoxRetrogen;
         private NumericUpDown numericMaxHeight;
         private Label label3;
