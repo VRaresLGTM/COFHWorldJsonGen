@@ -69,28 +69,32 @@ namespace COFHWorldJsonGen
 
         private void buttonClear_Click(object sender, EventArgs e)
         {
-            richTextBoxBiomeEntries.Clear();
-            richTextBoxDimensionEntries.Clear();
-            richTextBoxResult.Clear();
-            textBoxBlockName.Clear();
-            textBoxEntryName.Clear();
-            textBoxMaterial.Clear();
-            numericClusterCount.Value = 0;
-            numericClusterSize.Value = 0;
-            numericMaxHeight.Value = 0;
-            numericMinHeight.Value = 0;
-            checkBoxAdvancedBlockProperties.Checked = false;
-            checkBoxRestrictionBiome.Checked = true;
-            checkBoxRestrictionDimension.Checked = false;
-            comboBoxDistribution.SelectedIndex = -1;
-            comboBoxType.SelectedIndex = -1;
-            var toRemove = panelProperties.Controls.OfType<TextBox>().ToArray();
-            foreach (var textBox in toRemove)
+            if (MessageBox.Show("Are you sure you want to clear all fields?", "Confirm Clear", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
             {
-                panelProperties.Controls.Remove(textBox);
-                textBox.Dispose();
+                richTextBoxBiomeEntries.Clear();
+                richTextBoxDimensionEntries.Clear();
+                richTextBoxResult.Clear();
+                textBoxBlockName.Clear();
+                textBoxEntryName.Clear();
+                textBoxMaterial.Clear();
+                numericClusterCount.Value = 0;
+                numericClusterSize.Value = 0;
+                numericMaxHeight.Value = 0;
+                numericMinHeight.Value = 0;
+                checkBoxAdvancedBlockProperties.Checked = false;
+                checkBoxRestrictionBiome.Checked = true;
+                checkBoxRestrictionDimension.Checked = false;
+                comboBoxDistribution.SelectedIndex = -1;
+                comboBoxType.SelectedIndex = -1;
+                var toRemove = panelProperties.Controls.OfType<TextBox>().ToArray();
+                foreach (var textBox in toRemove)
+                {
+                    panelProperties.Controls.Remove(textBox);
+                    textBox.Dispose();
+                }
+                propertyFields.Clear();
+                textBoxEntryName.Focus();
             }
-            propertyFields.Clear();
         }
     }
 }
